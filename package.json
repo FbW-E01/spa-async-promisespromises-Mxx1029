@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "promises_promises_maxie",
   "version": "0.1.0",
-  "description": "",
+  "description": "Maxie Haufe",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
@@ -37,5 +37,7 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
 }
