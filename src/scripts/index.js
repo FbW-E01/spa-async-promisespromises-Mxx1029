@@ -8,18 +8,18 @@ import '../styles/main.scss';
 const p = new Promise( (resolve, reject) => {
     setTimeout(() => {
         resolve("The modal gets displayed");
-        const modal = document.querySelector(".modal");
-        modal.style.display = "block";
-        modal.addEventListener("click", (e) => {
-        switch(e.target.className) {
-            case "modal__content" :
-            case "close" :
-                modal.style.display = "none";
-                break;
+    }, 2000)
+    
+}).then((result) => { 
+    const modal = document.querySelector(".modal");
+    modal.style.display = "block";
+    modal.addEventListener("click", (e) => {
+    switch(e.target.className) {
+        case "modal__content" :
+        case "close" :
+            modal.style.display = "none";
+            break;
         };
     })
-    }, 60000)
-    
-}).then((result) => { console.log("done", result)
-    
-});
+    console.log("done", result)
+}).finally(() => { console.log("Done finally!") });
